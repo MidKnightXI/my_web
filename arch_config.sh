@@ -95,7 +95,7 @@ echo -e "${vert}Entrez votre mot de passe root\n${neutre}"
 passwd
 clear
 echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
-echo -e "veuillez enlever votre disque d'installation après l'extinction de la machine.\n"
+echo -e "veuillez enlever votre disque d'installation après l'extinction de la machine et le mode d'accès réseau en accès par ponts.\n"
 sleep 3
 echo -e "Après le redémarrage de votre machine veuiller exécuter arch_setup.sh.\n\n"
 exit
