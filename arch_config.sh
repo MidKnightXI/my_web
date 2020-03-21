@@ -10,17 +10,15 @@
 vert='\e[0;32m'
 rouge='\e[0;31m'
 neutre='\e[0;m'
-cat README.md
-sleep 5
 clear
-echo -p "${rouge}-------SETUP ARCHLINUX LVM-------${neutre}"
+echo -e "${rouge}-------SETUP ARCHLINUX LVM-------${neutre}"
 timedatectl set-ntp true
 lsblk
 echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
 echo -e "${rouge}Entrez le chemin que vous voulez utiliser.\n${neutre}"
 read -p "chemin (default /dev/sda):" input
 echo $input
-if [ "$input" = "\n"]
+if [ "$input" = "\0"]
 then
     fdisk /dev/sda
 else
