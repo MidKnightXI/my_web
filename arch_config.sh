@@ -19,7 +19,7 @@ lsblk
 echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
 echo -e "${rouge}Entrez le chemin que vous voulez utiliser.\n${neutre}"
 read -p "chemin (default /dev/sda):" input
-if [ "$input" = ""]
+if [ "$input" = "\n"]
 then
     fdisk /dev/sda
 else
