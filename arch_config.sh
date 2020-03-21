@@ -42,10 +42,9 @@ mkfs.ext4 /dev/vg1/root
 mkfs.ext4 /dev/vg1/home
 mkswap /dev/vg1/swap
 swapon /dev/vg1/swap
-echo -e "${vert}Supprimez tous les serveurs jusqu'à en avoir ~3 FR\n${neutre}"
-echo -e "PS: le premier miroir FR est cassé, donc enlevez le de la liste\n"
+echo -e "${rouge}INSTALLATION DU SYSTEME DE BASE\n${neutre}"
 sleep 6
-nano /etc/pacman.d/mirrorlist
+mv ./mirrorlist /etc/pacman.d/mirrorlist
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
