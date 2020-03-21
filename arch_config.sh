@@ -10,9 +10,10 @@
 vert='\e[0;32m'
 rouge='\e[0;31m'
 neutre='\e[0;m'
-echo -p "${rouge}[-------SETUP ARCHLINUX LVM-------]${neutre}"
 cat README.md
-sleep 10
+sleep 5
+clear
+echo -p "${rouge}[-------SETUP ARCHLINUX LVM-------]${neutre}"
 timedatectl set-ntp true
 lsblk
 echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
