@@ -40,6 +40,11 @@ mkfs.ext4 /dev/vg1/root
 mkfs.ext4 /dev/vg1/home
 mkswap /dev/vg1/swap
 swapon /dev/vg1/swap
+mount /dev/vg1/root /mnt
+mkdir /mnt/boot
+mount /dev/vg1/boot /mnt/boot
+mkdir /mnt/home
+mount /dev/vg1/home /mnt/home
 echo -e "${rouge}INSTALLATION DU SYSTEME DE BASE\n${neutre}"
 sleep 6
 mv ./mirrorlist /etc/pacman.d/mirrorlist
