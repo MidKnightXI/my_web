@@ -25,12 +25,20 @@ clear
 read -p "Souhaitez vous installer SSH (Y/n): " SSH
 if [ "$SSH" = "Y" ]
 then
-    pacman -S opensh
+    pacman -S openssh
 elif ["$SSH" = "y" ]
 then
-    pacman -S opensh
+    pacman -S openssh
 fi
 clear
+read -p "Souhaitez vous installer Sudo (Y/n): " sudo
+if [ "$sudo" = "Y" ]
+then
+    pacman -S sudo
+elif ["$sudo" = "y" ]
+then
+    pacman -S sudo
+fi
 echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
 clear
 echo -e "${rouge}-------EXTINCTION IMMINENTE-------\n\n${neutre}"
