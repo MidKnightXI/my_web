@@ -15,7 +15,7 @@ clear
 echo -e "${rouge}Après l'extinction de la machine, veuillez enlever le disque d'installation et passer le mode d'accès réseaux en accès par ponts\n\n${neutre}"
 sleep 2
 echo -e "${rouge}Au redémarrage, veuillez exécuter arch_setup.sh pour finaliser l'installation\n\n${neutre}"
-sleep 5
+sleep 7
 clear
 echo -e "${rouge}-------EXTINCTION IMMINENTE-------\n\n${neutre}"
 sleep 1

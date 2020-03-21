@@ -46,6 +46,6 @@ echo $hostname >> /etc/hostname
 echo -e "${vert}Entrez votre mot de passe root\n${neutre}"
 passwd
 clear
-echo -e "${vert}Veuillez lancer umount.sh\n${neutre}"
+echo -e "${vert}Veuillez lancer la commande exit puis exécuter le script umount.sh\n${neutre}"
 sleep 4
 exit

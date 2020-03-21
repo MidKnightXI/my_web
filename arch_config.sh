@@ -58,6 +58,7 @@ mv ./mirrorlist /etc/pacman.d/mirrorlist
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 mv mkinitcpio.conf /mnt
+mv arch_setup.sh /mnt
 mv linux_config.sh /mnt
 echo -e "${rouge}VEUILLEZ LANCER linux_config.sh APRES LE LANCEMENT DE BASH\n${neutre}"
 sleep 6
