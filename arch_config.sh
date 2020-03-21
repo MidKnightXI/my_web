@@ -20,9 +20,10 @@ echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
 echo -e "${rouge}Entrez le chemin que vous voulez utiliser.\n${neutre}"
 read -p "chemin (default /dev/sda):" input
 if [ "$input" = ""]
+then
     fdisk /dev/sda
-    else
-        fdisk $input
+else
+    fdisk $input
 fi
 path="${input}1"
 pvcreate $path
