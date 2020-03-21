@@ -62,9 +62,9 @@ echo $locale >> /etc/locale.conf
 tzselect
 ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 hwclock --systohc --utc
-echo -e "${vert}Ajoutez ${neutre}lvm2${vert} au hook juste avant ${neutre}filesystems"
-sleep 5
-nano /etc/mkinitcpio.conf
+echo -e "${rouge}INSTALLATION DE LINUX\n${neutre}"
+sleep 6
+mv mkinitcpio.conf /etc
 pacman -S lvm2
 mkinitcpio -p linux
 echo -e "${rouge}INSTALLATION DE GRUB\n${neutre}"
