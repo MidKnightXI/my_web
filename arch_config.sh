@@ -17,7 +17,6 @@ lsblk
 echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
 echo -e "${rouge}Entrez le chemin que vous voulez utiliser.\n${neutre}"
 read -p "chemin (default /dev/sda):" input
-echo $input
 if [ "$input" = "" ]
 then
     fdisk /dev/sda
@@ -65,7 +64,7 @@ pacman -S lvm2
 mkinitcpio -p linux
 echo -e "${rouge}INSTALLATION DE GRUB\n${neutre}"
 pacman -S GRUB
-if [ "$input" = ""]
+if [ "$input" = "" ]
 then
     grub-install --target=i386-pc /dev/sda
 else

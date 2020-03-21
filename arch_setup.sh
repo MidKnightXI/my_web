@@ -21,13 +21,13 @@ sleep 1
 read -p "Entrez le nom du driver en question: " driver
 pacman -S $driver
 read -p "Souhaitez vous installer SSH (Y/n): " SSH
-if [ "$SSH" = "Y"]
+if [ "$SSH" = "Y" ]
 then
     pacman -S opensh
-elif ["$SSH" = "y"]
+elif ["$SSH" = "y" ]
 then
     pacman -S opensh
-elif ["$SSH" = "n"]
+elif ["$SSH" = "n" ]
 then
     fi
 fi
