@@ -23,7 +23,12 @@ then
 else
     fdisk $input
 fi
-path="${input}1"
+if [ "$input" = "" ]
+then
+    path="/dev/sda1"
+else
+    path="${input}1"
+fi
 pvcreate $path
 vgcreate vg1 $path
 echo -e "${vert}CREATION DES VOLUMES LOGIQUES\n${neutre}"
