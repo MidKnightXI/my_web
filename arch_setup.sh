@@ -29,9 +29,6 @@ then
 elif ["$SSH" = "y" ]
 then
     pacman -S opensh
-elif ["$SSH" = "n" ]
-then
-    fi
 fi
 clear
 echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
