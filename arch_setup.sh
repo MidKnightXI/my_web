@@ -15,11 +15,13 @@ systemctl enable NetworkManager
 systemctl start NetworkManager
 pacman -S xfce4 xorg gdm xf86-input-synaptics
 systemctl enable gdm
+clear
 lspci | grep VGA
 echo -e "${vert}Recherchez le nom du driver correspondant au matériel ci-dessus\n${neutre}"
 sleep 1
 read -p "Entrez le nom du driver en question: " driver
 pacman -S $driver
+clear
 read -p "Souhaitez vous installer SSH (Y/n): " SSH
 if [ "$SSH" = "Y" ]
 then
@@ -31,6 +33,7 @@ elif ["$SSH" = "n" ]
 then
     fi
 fi
+clear
 echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
 clear
 echo -e "${rouge}-------EXTINCTION IMMINENTE-------\n\n${neutre}"

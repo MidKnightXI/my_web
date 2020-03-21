@@ -31,6 +31,7 @@ else
 fi
 pvcreate $path
 vgcreate vg1 $path
+clear
 echo -e "${vert}CREATION DES VOLUMES LOGIQUES\n${neutre}"
 read -p "Entrez la taile du volume boot:" size
 lvcreate -L $size -n boot vg1
@@ -50,6 +51,7 @@ mkdir /mnt/boot
 mount /dev/vg1/boot /mnt/boot
 mkdir /mnt/home
 mount /dev/vg1/home /mnt/home
+clear
 echo -e "${rouge}INSTALLATION DU SYSTEME DE BASE\n${neutre}"
 sleep 6
 mv ./mirrorlist /etc/pacman.d/mirrorlist
@@ -57,6 +59,7 @@ pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
 pacman -S nano
+clear
 echo -e "${rouge}SET UP LOCALE && TIME\n${neutre}"
 echo -e "${vert}Décommentez *en_US.UTF-8* ou n'importe quelle autre locale dont vous avez besoin"
 sleep 5
@@ -67,11 +70,13 @@ echo $locale >> /etc/locale.conf
 tzselect
 ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 hwclock --systohc --utc
+clear
 echo -e "${rouge}INSTALLATION DE LINUX\n${neutre}"
 sleep 6
 mv mkinitcpio.conf /etc
 pacman -S lvm2
 mkinitcpio -p linux
+clear
 echo -e "${rouge}INSTALLATION DE GRUB\n${neutre}"
 pacman -S GRUB
 if [ "$input" = "" ]
@@ -81,12 +86,14 @@ else
     grub-install --target=i386-pc $input
 fi
 grub-mkconfig -o /boot/grub/grub.cfg
-read -p "Entrez le nom de votre machine:" hostname
-echo $hostname >> /etc/hostname
 pacman -S iw wpa_supplicant dialog
 pacman -S networkmanager
+clear
+read -p "Entrez le nom de votre machine:" hostname
+echo $hostname >> /etc/hostname
 echo -e "${vert}Entrez votre mot de passe root\n${neutre}"
 passwd
+clear
 echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
 echo -e "veuillez enlever votre disque d'installation après l'extinction de la machine.\n"
 sleep 3
