@@ -68,6 +68,7 @@ mkinitcpio -p linux
 echo -e "${rouge}INSTALLATION DE GRUB\n${neutre}"
 pacman -S GRUB
 if [ "$input" = ""]
+then
     grub-install --target=i386-pc /dev/sda
 else
     grub-install --target=i386-pc $input
