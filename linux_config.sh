@@ -7,6 +7,9 @@
 
 #!bin/bash
 
+vert='\e[0;32m'
+rouge='\e[0;31m'
+neutre='\e[0;m'
 pacman -S nano
 clear
 echo -e "${rouge}SET UP LOCALE && TIME\n${neutre}"
@@ -27,7 +30,7 @@ pacman -S lvm2
 mkinitcpio -p linux
 clear
 echo -e "${rouge}INSTALLATION DE GRUB\n${neutre}"
-pacman -S GRUB
+pacman -S grub
 if [ "$input" = "" ]
 then
     grub-install --target=i386-pc /dev/sda
@@ -43,21 +46,6 @@ echo $hostname >> /etc/hostname
 echo -e "${vert}Entrez votre mot de passe root\n${neutre}"
 passwd
 clear
-echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
-echo -e "veuillez enlever votre disque d'installation après l'extinction de la machine et le mode d'accès réseau en accès par ponts.\n"
-sleep 3
-echo -e "Après le redémarrage de votre machine veuiller exécuter arch_setup.sh.\n\n"
+echo -e "${vert}Veuillez lancer unmount.sh\n${neutre}"
+sleep 4
 exit
-umount -R /mnt
-clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE-------\n\n${neutre}"
-sleep 1
-clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE .-------\n\n${neutre}"
-sleep 1
-clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE ..-------\n\n${neutre}"
-sleep 1
-clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE ...-------\n\n${neutre}"
-shutdown now
