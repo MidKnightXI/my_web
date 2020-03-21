@@ -13,7 +13,7 @@ neutre='\e[0;m'
 cat README.md
 sleep 5
 clear
-echo -p "${rouge}[-------SETUP ARCHLINUX LVM-------]${neutre}"
+echo -p "${rouge}-------SETUP ARCHLINUX LVM-------${neutre}"
 timedatectl set-ntp true
 lsblk
 echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
