@@ -7,29 +7,29 @@
 
 #!bin/bash
 
-vert='\e[0;32m'
-rouge='\e[0;31m'
-neutre='\e[0;m'
+green='\e[0;32m'
+red='\e[0;31m'
+neutral='\e[0;m'
 pacman -S nano
 clear
-echo -e "${rouge}SET UP LOCALE && TIME\n${neutre}"
-echo -e "${vert}Décommentez *en_US.UTF-8* ou n'importe quelle autre locale dont vous avez besoin"
+echo -e "${red}SET UP LOCALE && TIME\n${neutral}"
+echo -e "${green}Uncomment *en_US.UTF-8* or any other locale that you want to use."
 sleep 5
 nano /etc/locale.gen
 locale-gen
-read -p "Entrez le nom de la locale sélectionnée:" locale
+read -p "Enter the name of the selected locale: " locale
 echo $locale >> /etc/locale.conf
 tzselect
 ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 hwclock --systohc --utc
 clear
-echo -e "${rouge}INSTALLATION DE LINUX\n${neutre}"
+echo -e "${red}LINUX INSTALLATION\n${neutral}"
 sleep 6
 mv mkinitcpio.conf /etc
 pacman -S lvm2
 mkinitcpio -p linux
 clear
-echo -e "${rouge}INSTALLATION DE GRUB\n${neutre}"
+echo -e "${red}IGRUB INSTALLATION\n${neutral}"
 pacman -S grub
 if [ "$input" = "" ]
 then
@@ -41,11 +41,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S iw wpa_supplicant dialog
 pacman -S networkmanager
 clear
-read -p "Entrez le nom de votre machine:" hostname
+read -p "Enter the name of your machine:" hostname
 echo $hostname >> /etc/hostname
-echo -e "${vert}Entrez votre mot de passe root\n${neutre}"
+echo -e "${green}Enter your root password\n${neutral}"
 passwd
 clear
-echo -e "${vert}Veuillez lancer la commande exit puis exécuter le script umount.sh\n${neutre}"
+echo -e "${green}Please run the exit command, then execute the umount.sh script.\n${neutral}"
 sleep 4
 exit

@@ -7,9 +7,9 @@
 
 #!/bin/bash
 
-vert='\e[0;32m'
-rouge='\e[0;31m'
-neutre='\e[0;m'
+green='\e[0;32m'
+red='\e[0;31m'
+neutral='\e[0;m'
 NetworkManager
 systemctl enable NetworkManager
 systemctl start NetworkManager
@@ -17,12 +17,12 @@ pacman -S xfce4 xorg gdm xf86-input-synaptics
 systemctl enable gdm
 clear
 lspci | grep VGA
-echo -e "${vert}Recherchez le nom du driver correspondant au matériel ci-dessus\n${neutre}"
+echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
 sleep 1
-read -p "Entrez le nom du driver en question: " driver
+read -p "Enter the name of the driver concerned: " driver
 pacman -S $driver
 clear
-read -p "Souhaitez vous installer SSH (Y/n): " SSH
+read -p "Would you like to install SSH (Y/n): " SSH
 if [ "$SSH" = "Y" ]
 then
     pacman -S openssh
@@ -31,7 +31,7 @@ then
     pacman -S openssh
 fi
 clear
-read -p "Souhaitez vous installer Sudo (Y/n): " sudo
+read -p "Would you like to install Sudo (Y/n): " sudo
 if [ "$sudo" = "Y" ]
 then
     pacman -S sudo
@@ -39,16 +39,16 @@ elif ["$sudo" = "y" ]
 then
     pacman -S sudo
 fi
-echo -e "${rouge}-------FIN DE CONFIGURATION-------\n\n${neutre}"
+echo -e "${red}-------END OF CONFIGURATION-------\n\n${neutral}"
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE .-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION .-------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE ..-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION ..-------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE ...-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION ...-------\n\n${neutral}"
 shutdown now

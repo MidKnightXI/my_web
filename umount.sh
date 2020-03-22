@@ -7,24 +7,24 @@
 
 #!bin/bash
 
-vert='\e[0;32m'
-rouge='\e[0;31m'
-neutre='\e[0;m'
+green='\e[0;32m'
+red='\e[0;31m'
+neutral='\e[0;m'
 umount -R /mnt
 clear
-echo -e "${rouge}Après l'extinction de la machine, veuillez enlever le disque d'installation et passer le mode d'accès réseaux en accès par ponts\n\n${neutre}"
+echo -e "${red}After switching off the machine, please remove the installation disk and change the network access mode to bridged.\n\n${neutral}"
 sleep 2
-echo -e "${rouge}Au redémarrage, veuillez exécuter arch_setup.sh pour finaliser l'installation\n\n${neutre}"
+echo -e "${red}On reboot, please run arch_setup.sh to complete the installation.\n\n${neutral}"
 sleep 7
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE .-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION .-------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE ..-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION ..-------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${rouge}-------EXTINCTION IMMINENTE ...-------\n\n${neutre}"
+echo -e "${red}-------IMMINENT EXTINCTION ...-------\n\n${neutral}"
 shutdown now

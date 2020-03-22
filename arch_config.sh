@@ -7,16 +7,16 @@
 
 #!bin/bash
 
-vert='\e[0;32m'
-rouge='\e[0;31m'
-neutre='\e[0;m'
+green='\e[0;32m'
+red='\e[0;31m'
+neutral='\e[0;m'
 clear
-echo -e "${rouge}[-------SETUP ARCHLINUX LVM-------]${neutre}"
+echo -e "${red}[-------SETUP ARCHLINUX LVM-------]${neutral}"
 timedatectl set-ntp true
 lsblk
-echo -e "${vert}PARTIONNEMENT DU DISQUE${neutre}\n"
-echo -e "${rouge}Entrez le chemin que vous voulez utiliser.\n${neutre}"
-read -p "Chemin (default /dev/sda):" input
+echo -e "${green}DISK PARTITIONING${neutral}\n"
+echo -e "${red}Enter the path you want to use.\n${neutral}"
+read -p "Path (default /dev/sda): " input
 if [ "$input" = "" ]
 then
     fdisk /dev/sda
@@ -32,14 +32,14 @@ fi
 pvcreate $path
 vgcreate vg1 $path
 clear
-echo -e "${vert}CREATION DES VOLUMES LOGIQUES\n${neutre}"
-read -p "Entrez la taile du volume boot:" size
+echo -e "${green}CREATION OF LOGICAL VOLUMES\n${neutral}"
+read -p "Enter the boot volume size: " size
 lvcreate -L $size -n boot vg1
-read -p "Entrez la taile du volume root:" size
+read -p "Enter the size of the root volume: " size
 lvcreate -L $size -n root vg1
-read -p "Entrez la taile du volume home:" size
+read -p "Enter the size of the home volume: " size
 lvcreate -L $size -n home vg1
-read -p "Entrez la taile du volume swap:" size
+read -p "Enter the size of the swap volume: " size
 lvcreate -L $size -n swap vg1
 mkfs.ext2 /dev/vg1/boot
 mkfs.ext4 /dev/vg1/root
@@ -52,7 +52,7 @@ mount /dev/vg1/boot /mnt/boot
 mkdir /mnt/home
 mount /dev/vg1/home /mnt/home
 clear
-echo -e "${rouge}INSTALLATION DU SYSTEME DE BASE\n${neutre}"
+echo -e "${red}BASIC SYSTEM INSTALLATION\n${neutral}"
 sleep 6
 mv ./mirrorlist /etc/pacman.d/mirrorlist
 pacstrap /mnt base linux linux-firmware
@@ -60,6 +60,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 mv mkinitcpio.conf /mnt
 mv arch_setup.sh /mnt
 mv linux_config.sh /mnt
-echo -e "${rouge}VEUILLEZ LANCER linux_config.sh APRES LE LANCEMENT DE BASH\n${neutre}"
+echo -e "${red}PLEASE LAUNCH linux_config.sh AFTER THE LAUNCH OF BASH\n${neutral}"
 sleep 6
 arch-chroot /mnt /bin/bash
