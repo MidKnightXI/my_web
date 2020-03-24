@@ -29,7 +29,7 @@ mv mkinitcpio.conf /etc
 pacman -S lvm2
 mkinitcpio -p linux
 clear
-echo -e "${red}IGRUB INSTALLATION\n${neutral}"
+echo -e "${red}GRUB INSTALLATION\n${neutral}"
 pacman -S grub
 if [ "$input" = "" ]
 then
