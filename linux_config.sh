@@ -18,7 +18,7 @@ sleep 5
 nano /etc/locale.gen
 locale-gen
 read -p "Enter the name of the selected locale: " locale
-echo $locale >> /etc/locale.conf
+echo LANG=$locale >> /etc/locale.conf
 tzselect
 ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 hwclock --systohc --utc
