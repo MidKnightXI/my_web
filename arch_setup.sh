@@ -13,15 +13,6 @@ neutral='\e[0;m'
 NetworkManager
 systemctl enable NetworkManager
 systemctl start NetworkManager
-pacman -S xfce4 xorg gdm xf86-input-synaptics
-systemctl enable gdm
-clear
-lspci | grep VGA
-echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
-sleep 1
-read -p "Enter the name of the driver concerned: " driver
-pacman -S $driver
-clear
 read -p "Would you like to install SSH (Y/n): " SSH
 if [ "$SSH" = "" ]
 then
@@ -45,6 +36,15 @@ elif ["$sudo" = "y" ]
 then
     pacman -S sudo
 fi
+pacman -S xfce4 xorg gdm xf86-input-synaptics
+systemctl enable gdm
+clear
+lspci | grep VGA
+echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
+sleep 1
+read -p "Enter the name of the driver concerned: " driver
+pacman -S $driver
+clear
 echo -e "${red}-------END OF CONFIGURATION-------\n\n${neutral}"
 clear
 echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"

@@ -38,8 +38,7 @@ else
     grub-install --target=i386-pc $input
 fi
 grub-mkconfig -o /boot/grub/grub.cfg
-pacman -S iw wpa_supplicant dialog
-pacman -S networkmanager
+pacman -S iw wpa_supplicant dialog networkmanager
 clear
 read -p "Enter the name of your machine: " hostname
 echo $hostname >> /etc/hostname
