@@ -41,7 +41,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S iw wpa_supplicant dialog
 pacman -S networkmanager
 clear
-read -p "Enter the name of your machine:" hostname
+read -p "Enter the name of your machine: " hostname
 echo $hostname >> /etc/hostname
 echo -e "${green}Enter your root password\n${neutral}"
 passwd

@@ -23,7 +23,10 @@ read -p "Enter the name of the driver concerned: " driver
 pacman -S $driver
 clear
 read -p "Would you like to install SSH (Y/n): " SSH
-if [ "$SSH" = "Y" ]
+if [ "$SSH" = "" ]
+then
+    pacman -S openssh
+elif ["$SSH" = "Y" ]
 then
     pacman -S openssh
 elif ["$SSH" = "y" ]
@@ -32,7 +35,10 @@ then
 fi
 clear
 read -p "Would you like to install Sudo (Y/n): " sudo
-if [ "$sudo" = "Y" ]
+if [ "$sudo" = "" ]
+then
+    pacman -S sudo
+elif ["$sudo" = "Y" ]
 then
     pacman -S sudo
 elif ["$sudo" = "y" ]
