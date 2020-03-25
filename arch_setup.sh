@@ -39,14 +39,17 @@ fi
 read -p "Would you like to include the "clean" command in your shell(Y/n): " clean
 if [ "$clean" = "" ]
 then
+    touch /bin/bash/clean.sh
     echo "rm -f *~ && rm -f *#" >> /bin/bash/clean.sh
     chmod 755 /bin/bash/clean.sh
 elif [ "$clean" = "Y" ]
 then
+    touch /bin/bash/clean.sh
     echo "rm -f *~ && rm -f *#" >> /bin/bash/clean.sh
     chmod 755 /bin/bash/clean.sh
 elif [ "$clean" = "y" ]
 then
+    touch /bin/bash/clean.sh
     echo "rm -f *~ && rm -f *#" >> /bin/bash/clean.sh
     chmod 755 /bin/bash/clean.sh
 fi
