@@ -17,10 +17,10 @@ read -p "Would you like to install SSH (Y/n): " SSH
 if [ "$SSH" = "" ]
 then
     pacman -S openssh
-elif ["$SSH" = "Y" ]
+elif [ "$SSH" = "Y" ]
 then
     pacman -S openssh
-elif ["$SSH" = "y" ]
+elif [ "$SSH" = "y" ]
 then
     pacman -S openssh
 fi
@@ -29,10 +29,10 @@ read -p "Would you like to install Sudo (Y/n): " sudo
 if [ "$sudo" = "" ]
 then
     pacman -S sudo
-elif ["$sudo" = "Y" ]
+elif [ "$sudo" = "Y" ]
 then
     pacman -S sudo
-elif ["$sudo" = "y" ]
+elif [ "$sudo" = "y" ]
 then
     pacman -S sudo
 fi

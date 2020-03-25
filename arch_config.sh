@@ -12,6 +12,7 @@ red='\e[0;31m'
 neutral='\e[0;m'
 clear
 echo -e "${red}[-------SETUP ARCHLINUX LVM-------]${neutral}"
+loacalectl -setkeymap --no-convert fr
 timedatectl set-ntp true
 lsblk
 echo -e "${green}DISK PARTITIONING${neutral}\n"
@@ -58,7 +59,7 @@ mv ./mirrorlist /etc/pacman.d/mirrorlist
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 mv mkinitcpio.conf /mnt
-mv arch_setup.sh /mnt
+mv arch_setup.sh /mnt/root
 mv linux_config.sh /mnt
 echo -e "${red}PLEASE LAUNCH linux_config.sh AFTER THE LAUNCH OF BASH\n${neutral}"
 sleep 6
