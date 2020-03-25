@@ -50,29 +50,25 @@ then
     echo "rm -f *~ && rm -f *#" >> /bin/bash/clean.sh
     chmod 755 /bin/bash/clean.sh
 fi
-pacman -S xfce4 xfce4-goodies xorg-server xf86-input-synaptics
-useradd test
-passwd test
-startxfce4
-exit
-# systemctl enable gdm
-# clear
-# lspci | grep VGA
-# echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
-# sleep 1
-# read -p "Enter the name of the driver concerned: " driver
-# pacman -S $driver
-# clear
-# echo -e "${red}-------END OF CONFIGURATION-------\n\n${neutral}"
-# clear
-# echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"
-# sleep 1
-# clear
-# echo -e "${red}-------IMMINENT EXTINCTION .-------\n\n${neutral}"
-# sleep 1
-# clear
-# echo -e "${red}-------IMMINENT EXTINCTION ..-------\n\n${neutral}"
-# sleep 1
-# clear
-# echo -e "${red}-------IMMINENT EXTINCTION ...-------\n\n${neutral}"
-# shutdown now
+pacman -S xfce4 xfce-goodies xorg-server lightdm lightdm-gtk-greeter
+systemctl enable lightdm
+clear
+lspci | grep VGA
+echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
+sleep 1
+read -p "Enter the name of the driver concerned: " driver
+pacman -S $driver
+clear
+echo -e "${red}-------END OF CONFIGURATION-------\n\n${neutral}"
+clear
+echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"
+sleep 1
+clear
+echo -e "${red}-------IMMINENT EXTINCTION .-------\n\n${neutral}"
+sleep 1
+clear
+echo -e "${red}-------IMMINENT EXTINCTION ..-------\n\n${neutral}"
+sleep 1
+clear
+echo -e "${red}-------IMMINENT EXTINCTION ...-------\n\n${neutral}"
+shutdown now
