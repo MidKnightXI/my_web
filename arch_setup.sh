@@ -36,26 +36,6 @@ elif [ "$sudo" = "y" ]
 then
     pacman -S sudo
 fi
-read -p "Would you like to include the "clean" command in your shell(Y/n): " clean
-if [ "$clean" = "" ]
-then
-    touch clean.sh
-    echo "rm -f *~ && rm -f *#" >> clean.sh
-    chmod 755 clean.sh
-    mv clean.sh /bin/bash
-elif [ "$clean" = "Y" ]
-then
-    touch clean.sh
-    echo "rm -f *~ && rm -f *#" >> clean.sh
-    chmod 755 clean.sh
-    mv clean.sh /bin/bash
-elif [ "$clean" = "y" ]
-then
-    touch clean.sh
-    echo "rm -f *~ && rm -f *#" >> clean.sh
-    chmod 755 clean.sh
-    mv clean.sh /bin/bash
-fi
 pacman -S xfce4 xfce-goodies xorg-server lightdm lightdm-gtk-greeter
 systemctl enable lightdm
 clear
