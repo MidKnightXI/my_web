@@ -45,6 +45,9 @@ sleep 1
 read -p "Enter the name of the driver concerned: " driver
 pacman -S $driver
 clear
+echo -e "${green}-------CONFIGURATION COMPLETE-------\n${neutral}"
+sleep 7
+clear
 echo -e "${red}-------END OF CONFIGURATION-------\n\n${neutral}"
 clear
 echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"
