@@ -12,7 +12,7 @@ red='\e[0;31m'
 neutral='\e[0;m'
 clear
 echo -e "${red}[-------SETUP ARCHLINUX LVM-------]${neutral}"
-loacalectl -setkeymap --no-convert fr
+localectl -setkeymap --no-convert fr
 timedatectl set-ntp true
 lsblk
 echo -e "${green}DISK PARTITIONING${neutral}\n"

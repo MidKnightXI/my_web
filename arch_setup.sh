@@ -36,8 +36,8 @@ elif [ "$sudo" = "y" ]
 then
     pacman -S sudo
 fi
-pacman -S xfce4 xfce-goodies xorg-server lightdm lightdm-gtk-greeter
-systemctl enable lightdm
+pacman -S xfce4 xfce-goodies xorg-server gdm
+systemctl enable gdm
 clear
 lspci | grep VGA
 echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
