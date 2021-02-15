@@ -1,6 +1,6 @@
 ##
-## EPITECH PROJECT, 2019
-## script_archlinux_config
+## MidKnight PROJECT, 2019
+## {MidKnight}projects
 ## File description:
 ## unmount.sh
 ##

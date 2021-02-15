@@ -1,6 +1,6 @@
 ##
-## EPITECH PROJECT, 2019
-## {EPITECH}projects
+## MidKnight PROJECT, 2019
+## {MidKnight}projects
 ## File description:
 ## arch_setup.sh
 ##
