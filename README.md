@@ -3,11 +3,9 @@
 
 [WARNING] :
 
-- the script is installing XFCE and LightDM as a display manager, you can modify it into arch_setup.sh.
+- The script is installing XFCE and LightDM as a display manager, you can modify it into arch_setup.sh.
 
-- the default "mirrorlist" is replaced by french mirrors, you can modify the file "mirrorlist" as you want to.
-
-- All the script instructions are translated by myself so it may have some errors
+- The default "mirrorlist" is replaced by french mirrors, you can modify the file "mirrorlist" as you want to.
 
 1. launch the arch_config.sh
 2. follow instructions
