@@ -36,8 +36,10 @@ elif [ "$sudo" = "y" ]
 then
     pacman -S sudo
 fi
-pacman -S xfce4 xfce-goodies xorg-server gdm
-systemctl enable gdm
+pacman -S xfce4 xfce-goodies
+pacman -S --needed xorg
+pacman -S lightdm lightdm-gtk-greeter
+systemctl enable lightdm
 clear
 lspci | grep VGA
 echo -e "${green}Look for the name of the driver corresponding to the hardware above.\n${neutral}"
@@ -45,19 +47,19 @@ sleep 1
 read -p "Enter the name of the driver concerned: " driver
 pacman -S $driver
 clear
-echo -e "${green}-------CONFIGURATION COMPLETE-------\n${neutral}"
+echo -e "${green}------- CONFIGURATION COMPLETE -------\n${neutral}"
 sleep 7
 clear
-echo -e "${red}-------END OF CONFIGURATION-------\n\n${neutral}"
+echo -e "${red}------- END OF CONFIGURATION -------\n\n${neutral}"
 clear
-echo -e "${red}-------IMMINENT EXTINCTION-------\n\n${neutral}"
+echo -e "${red}------- IMMINENT EXTINCTION -------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${red}-------IMMINENT EXTINCTION .-------\n\n${neutral}"
+echo -e "${red}------- IMMINENT EXTINCTION .------\n\n${neutral}"
 sleep 1
 clear
-echo -e "${red}-------IMMINENT EXTINCTION ..-------\n\n${neutral}"
+echo -e "${red}------- IMMINENT EXTINCTION ..-----\n\n${neutral}"
 sleep 1
 clear
-echo -e "${red}-------IMMINENT EXTINCTION ...-------\n\n${neutral}"
+echo -e "${red}------- IMMINENT EXTINCTION ...----\n\n${neutral}"
 shutdown now
