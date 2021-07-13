@@ -1,5 +1,5 @@
-# script_archlinux_config
-[1.1] Bash script to configure your Archilinux perfectly with LVM
+# Script for the setup of Arch
+[1.1] Bash script to configure your Arch linux with LVM
 
 [WARNING] :
 
