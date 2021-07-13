@@ -9,4 +9,4 @@
 
 1. launch the arch_config.sh
 2. follow instructions
-3. ENJOY !!! :D
+3. ENJOY and add a star to my repo !!! :D
