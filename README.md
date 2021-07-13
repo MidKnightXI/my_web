@@ -1,4 +1,4 @@
-# Script for the setup of Arch
+# Script to setup Arch with LVM
 [1.1] Bash script to configure your Arch linux with LVM
 
 [WARNING] :
