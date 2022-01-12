@@ -1,17 +1,18 @@
 ##
 ## Arch Linux repository mirrorlist
-## Generated on 2020-03-21
+## Generated on 2021-12-12
 ##
 
 ## France
+
 Server = http://archlinux.de-labrusse.fr/$repo/os/$arch
 Server = http://mirror.archlinux.ikoula.com/archlinux/$repo/os/$arch
-Server = http://archlinux.vi-di.fr/$repo/os/$arch
-Server = http://mirrors.arnoldthebat.co.uk/archlinux/$repo/os/$arch
-Server = https://mirrors.arnoldthebat.co.uk/archlinux/$repo/os/$arch
+Server = https://archlinux.vi-di.fr/$repo/os/$arch
+Server = https://mirror.bakerserver.space/Arch/$repo/os/$arch
 Server = http://archlinux.mirrors.benatherton.com/$repo/os/$arch
 Server = http://mirror.cyberbits.eu/archlinux/$repo/os/$arch
 Server = https://mirror.cyberbits.eu/archlinux/$repo/os/$arch
+Server = http://archlinux.datagr.am/$repo/os/$arch
 Server = https://mirrors.eric.ovh/arch/$repo/os/$arch
 Server = http://mirror.ibcp.fr/pub/archlinux/$repo/os/$arch
 Server = http://mirror.lastmikoi.net/archlinux/$repo/os/$arch
@@ -28,9 +29,13 @@ Server = https://mirror.oldsql.cc/archlinux/$repo/os/$arch
 Server = http://archlinux.mirrors.ovh.net/archlinux/$repo/os/$arch
 Server = http://archlinux.polymorf.fr/$repo/os/$arch
 Server = http://archlinux.rezopole.net/$repo/os/$arch
+Server = https://mirrors.slaanesh.org/archlinux/$repo/os/$arch
 Server = http://mirrors.standaloneinstaller.com/archlinux/$repo/os/$arch
+Server = https://mirror.sysa.tech/archlinux/$repo/os/$arch
 Server = https://mirror.thekinrar.fr/archlinux/$repo/os/$arch
 Server = http://ftp.u-strasbg.fr/linux/distributions/archlinux/$repo/os/$arch
 Server = https://mirror.wormhole.eu/archlinux/$repo/os/$arch
+Server = http://mirroir.wptheme.fr/archlinux/$repo/os/$arch
+Server = https://mirroir.wptheme.fr/archlinux/$repo/os/$arch
 Server = http://arch.yourlabs.org/$repo/os/$arch
 Server = https://arch.yourlabs.org/$repo/os/$arch
