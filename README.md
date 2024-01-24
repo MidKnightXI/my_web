@@ -9,4 +9,4 @@
 2. follow instructions
 3. ENJOY and star my repo !!! :D
 
-If you have any questions, just open an issue, I'll be glad to answer it on my free time especially if you're from Epitech univ.
+If you have any question, just open an issue, I'll be glad to answer it on my free time especially if you're from Epitech univ.
